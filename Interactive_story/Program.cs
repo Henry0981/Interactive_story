@@ -26,7 +26,9 @@ if (bra == "a")
         Console.WriteLine("du kommer fram till slotts dörren men någon står och väntar framför den.");
         Console.WriteLine("vill du använda ditt svärd för att dräpa vakten eller vill försöka övertala honnom att låta dig gå in i slottet?");
         Console.WriteLine("a= använd svärdet, b= övertala honnom");
+
         string svärd = Console.ReadLine();
+
         if (svärd == "a")
         {
             Console.WriteLine("vakten ber om sitt liv, Han har en familj! men du slår ner honnom med ditt svärd");
@@ -61,7 +63,7 @@ if (bra == "a")
 
         Console.WriteLine("du går ner mot stranden och dar upp den rostiga båten. ");
         Console.WriteLine("du får klump i magen när du kollar ut över de svarta vattnet");
-
+    
     }
 
     else
