@@ -2,97 +2,110 @@
 
 string name = Console.ReadLine();
 
-
-
 Console.WriteLine($"trevligt att träffas {name} vi behöver din hjälp att rädda byns bagare! vill du hjälpa oss? ");
+
 Console.WriteLine("a= ja, b= nej");
-string bra = Console.ReadLine();
-
-if (bra == "a")
-
+string bra = "";
+while (bra !="a" && bra != "b")
 {
+ bra = Console.ReadLine();
+ if (bra != "a" && bra != "b")
+ {
+    Console.WriteLine(" du måste välja mellan a eller b");
+ }
 
+}
+if (bra == "a")
+{
     Console.WriteLine("wow vad modigt, bagaren har blivit kidnappad av den onda kungen. Det finns två vägar till kungens slott.");
     Console.WriteLine("vilken väg vill du ta? vill du gå genom den mörka skogen eller segla över sjön? ");
     Console.WriteLine(" a= skogen, b= sjön");
 
-    string väg = Console.ReadLine();
+    string väg= "";
+    while (väg !="a" && väg != "b" && väg !="c")
+    {
+        väg = Console.ReadLine(); 
+     if (väg != "a" && väg!= "b")
+     {
+        Console.WriteLine("du måste välja mellan a eller b");
+     }
+    }
 
     if (väg == "a")
 
     {
-
         Console.WriteLine("du fortsätter genom den mörka skogen. något lyser från marken, Det är ett svärd! du tar med det ifall.");
-        Console.WriteLine("du kommer fram till slotts dörren men någon står och väntar framför den.");
-        Console.WriteLine("vill du använda ditt svärd för att dräpa vakten eller vill försöka övertala honnom att låta dig gå in i slottet?");
-        Console.WriteLine("a= använd svärdet, b= övertala honnom");
+        Console.WriteLine("du kommer fram till slottet, vad gör du nu?");
+        Console.WriteLine("a= försök hitta bagaren, b= attackera den onda kungen, c= spring härifrån");
+         string kung = "";
+           while (kung !="a" && kung !="b" && kung !="c")
+           {
+             kung=Console.ReadLine();
+             if (väg!="a" && väg!="b" && väg!="c")
+             {
+                Console.WriteLine();
 
-        string svärd = Console.ReadLine();
+             }
+             
 
-        if (svärd == "a")
-        {
-            Console.WriteLine("vakten ber om sitt liv, Han har en familj! men du slår ner honnom med ditt svärd");
-            Console.WriteLine("du fortsätter in i slottet. Där ser du bagaren, men han värkar göra kakor till invånarna av byn med gift i dem! ");
-            Console.WriteLine("vill du döda bakaren eller prata med honnom");
-            Console.WriteLine("a=döda, b= prata");
-            string potatis = Console.ReadLine();
-            if (potatis == "a")
-            {
-                Console.WriteLine($" {namn} lyfter sitt svärd och tar bagarens liv. byn är räddad men vad kostade det?");
+           }
 
-            }
-
-            else if (potatis == "b")
-
-            {
-                Console.WriteLine($"du försöker prata med bagaren men du är fylld av bloodlust,")
-
-
-
-        }
-
-
-        }
-
-
+         if (kung == "a")
+         {
+            Console.WriteLine($"du letar runt lite och till slut hittar du bagaren i en fängelsecell. Verkar som att vakten som ska hålla koll på bagaren är på sin lunchrast!");
+            Console.WriteLine("du räddar bagaren! the end");
+         }
+        
+          else if (kung == "b")
+          {
+           Console.WriteLine("du hittar den onda kungen och använder ditt svärd för att attackera honnom."); 
+           Console.WriteLine("du letar runt lite men kan inte hitta bagaren. Någon måste ha tagit honnom");
+           Console.WriteLine("the end");
+          }
+          else if (kung == "c")
+          {
+            Console.WriteLine("du försöker springa men ramlar och landar på ditt svärd");
+            Console.WriteLine("the end");
+          }
+    }
+    else if (väg == "b")
+    {
+        Console.WriteLine($"{name} går ner mot stranden och dar upp den rostiga båten. i båten hittar du en gammal croissant ");
+        Console.WriteLine("efter en lång resa kommer du fram till slottet");
+        Console.WriteLine("inuti slotter hittar du bagaren i en fängelsecell. framför bagaren ser du en vakt. vill du attackera vackten eller övertala honnom att låta bagaren gå? ");
+        Console.WriteLine("a= attackera vakten, b= övertala vackten");
+        string val= Console.ReadLine();
+        if (val=="a")   
+    {
+     Console.WriteLine("du försöker attackera vakten, men du har inget vapen så du förlorar.");
+     Console.WriteLine("the end");
     }
 
-    else if (väg == "b")
+     else if (val == "b")
+     {
+     Console.WriteLine("du försöker övertala vakten men han är hungrig och vägrar lyssna. Vakten tar dig till kungen");
+    Console.WriteLine("the end");
 
-    {
-
-        Console.WriteLine("du går ner mot stranden och dar upp den rostiga båten. ");
-        Console.WriteLine("du får klump i magen när du kollar ut över de svarta vattnet");
+     } 
+     else if (val=="c")
+     {
+     Console.WriteLine("du ger vakten din croissant! vakten blir jätteglad och låter dig gå! hur visste du att c skulle funka?");
+     Console.WriteLine("secret end");
+     }
     
     }
-
-    else
-
-    {
-
-        Console.WriteLine("nu blev det fel, du måste börja om nu :(");
-
-    }
-
 }
 
-else if (bra == "b")
-
+  else if (bra == "b")
 {
-
     Console.WriteLine("wow vilken bra äventyrare du är! aja antar att spelet är klart här då......");
-
 }
+ 
 
-else
+Console.ReadLine(); 
 
-{
 
-    Console.WriteLine("sådär kan man inte skriva, nu får du börja om helt från början! :)");
 
-}
-
-Console.ReadLine();
 
 
 
